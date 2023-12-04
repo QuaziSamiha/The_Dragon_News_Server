@@ -36,7 +36,18 @@ app.get("/categories/:id", (req, res) => {
     res.send(categoryNews);
   }
 });
-
+// app.get("/categories/:id", (req, res) => {
+//   const id = parseInt(req.params.id);
+//   // console.log(id);
+//   if (id == 0) {
+//     res.send(allNews);
+//   } else {
+//     const categoryNews = allNews.filter(
+//       (aNews) => parseInt(aNews.category_id) === id
+//     );
+//     res.send(categoryNews);
+//   }
+// });
 app.listen(port, () => {
   console.log(`dragon api is running on port ${port}`);
 });
